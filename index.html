@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            background-color: blueviolet;
+        }
+
+        main {
+            height: 100%;
+            width: 100%;
+            /* background-color: black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main {
+            height: 50%;
+            width: 20%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+            gap: 24px;
+            flex-direction: column;
+            border-radius: 5px;
+
+            /* display: flex; */
+        }
+
+        .first {
+            height: 40px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid black; */
+            gap: 15px;
+        }
+
+        .first div {
+            height: 100%;
+            width: 20%;
+            border: 1px solid black;
+            display: grid;
+            place-content: center;
+            font-size: 30px;
+        }
+
+        .second {
+            height: 40px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid black; */
+            gap: 15px;
+        }
+
+        .second div {
+            height: 100%;
+            width: 20%;
+            border: 1px solid black;
+            display: grid;
+            place-content: center;
+            font-size: 30px;
+        }
+
+        input {
+            padding: 7px;
+            border: 1px solid rgb(126, 126, 132);
+            margin: 1px auto;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            outline: none;
+        }
+
+        button {
+            padding: 7px;
+            width: 95%;
+            background-color: blue;
+            margin: 1px auto;
+            font-size: 20px;
+            color: white;
+            border: none;
+            display: block;
+        }
+        @media (max-width:600px) {
+            .main{
+                width: 60%;
+                overflow: hidden;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="main">
+            <div class="first">
+                <div class="number1">0</div>
+                <div>+</div>
+                <div class="number2">0</div>
+            </div>
+            <div class="second">
+                <div>=</div>
+            </div>
+            <input type="text" placeholder="?" autofocus>
+            <button onclick="check()">Submit</button>
+            <div>Score : <span id="Score">0</span></div>
+        </div>
+    </main>
+
+    <script>
+        var main = document.querySelector(".main");
+        var first = document.querySelector(".first");
+        var second = document.querySelector(".second");
+        var number1 = document.querySelector(".number1");
+        var number2 = document.querySelector(".number2");
+        var but=document.querySelector("button");
+        var inp = document.querySelector("input");
+        var score = document.querySelector("#Score");
+        var sco = 0;
+        var ans = 0;
+
+        function ramdem() {
+            var num1 = Math.floor(Math.random() * 100);
+            var num2 = Math.floor(Math.random() * 100);
+            ans = num1 + num2
+            //   console.log(ans);
+            number1.innerHTML = num1
+            number2.innerHTML = num2
+        }
+
+        function check() {
+            if (ans == inp.value) {
+                sco++
+                zoom()
+                inp.value = ""
+                var to=0
+                if (sco==5 && to==0) {
+                first.style.display="none";
+                second.style.display="none";
+                inp.style.display="none";
+                main.style.display="flex";
+                main.innerHTML+="<h1>Won game</h1>";
+                but.innerText="Play again";
+                to=1
+                
+            }
+                const defaults = {
+                    spread: 360,
+                    ticks: 100,
+                    gravity: 0,
+                    decay: 0.94,
+                    startVelocity: 30,
+                    shapes: ["heart"],
+                    colors: ["FFC0CB", "FF69B4", "FF1493", "C71585"],
+                };
+
+                confetti({
+                    ...defaults,
+                    particleCount: 50,
+                    scalar: 2,
+                });
+
+                confetti({
+                    ...defaults,
+                    particleCount: 25,
+                    scalar: 3,
+                });
+
+                confetti({
+                    ...defaults,
+                    particleCount: 10,
+                    scalar: 4,
+                });
+                ramdem()
+                //  console.log(sco);
+
+            }
+                
+            
+            else {
+                sco--
+                zoom()
+                inp.value = ""
+                ramdem()
+                //  console.log(sco);
+            }
+        }
+
+        function zoom() {
+            score.innerHTML = sco
+        }
+
+        ramdem()
+    </script>
+</body>
+
+</html>

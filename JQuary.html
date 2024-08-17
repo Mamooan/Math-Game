@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        .a{
+            height: 25vh;
+            width: 30%;
+            border: 1px solid black;
+            background-color: blueviolet;
+            position: relative;
+            color: white;
+/* background-color: black; */
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="a">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <ul>
+            <li>home</li>
+            <li>about us</li>
+            <li>information</li>
+            <li>mambers</li>
+            <li>contant</li>
+        </ul>
+        <button id="c">show</button>
+    </div>-->
+    <!-- <button id="b">hide</button> -->
+
+    <!-- <form action="" required>
+        <h1>FORM</h1>
+        <label for="">NAME</label>
+        <input type="text" id="a" required>
+        <br>
+        <label for="">NUMBER</label>
+        <input type="number" id="b" required>
+        <br>
+        <label for="">COUNTRY</label>
+        <select name=""  id="c">
+            <option value=""></option>
+            <option value="">Pakistan</option>
+            <option value="">USA</option>
+            <option value="">India</option>
+            <option value="">China</option>
+        </select>
+        <br>
+        <button id="d">Submit</button>
+    </form>
+    <ul id="e"></ul> -->
+
+
+
+
+
+    <div class="a">
+        <h2>Usman</h2>
+    </div>
+    <button id="d">Stop</button>
+
+
+
+    <script>
+        // $(document).ready(function(){
+        //     var a=$("p").html("aAhmad is grate five time than everyone")
+        //     console.log(a);
+        // })
+        // $(document).ready(function(){
+        //     var a=$("p").html("aAhmad is grate five time than everyone")
+        //     console.log(a);
+        // })
+        // $(document).ready(function(){
+        //     $("ul").click(function(){
+        //         $("li:first").css("border","1px solid red")
+        //     })
+        // })
+        // $(document).ready(function(){
+        //     $("#b").click(function(){
+        //         $("li:first").hide()
+        //     })
+        // })
+        // $(document).ready(function(){
+        //     $("#c").click(function(){
+        //         $("li:first").show()
+        //     })
+        // })
+        // $(document).ready(function(){
+        //     $("#b").click(function(){
+        //         $(this).html("show")
+        //         $("li:first").toggle()
+        //         // $(this).html("hide")
+        //     })
+        // })
+        // $(document).ready(function(){
+        //     $(document).keypress(function(){
+        //         $("body").css("background-color" , "black")
+        //         // $(this).html("hide")
+        //     })
+        // })
+        // $(document).ready(function(){
+        //     $(document).keyup(function(){
+        //         $("body").css("background-color" , "white")
+        //         // $(this).html("hide")
+        //     })
+        // })
+
+
+        // $(document).ready(function(){
+        //     $("#a,#b,#c").focus(function(){
+         
+        //         $(this).css("background-color", "#cccccc")
+        //     })
+        //     $("#a,#b,#c").blur(function(){
+        //         $(this).css("background-color", "")
+        //     })
+        //     $("#a,#b").select(function(){
+        //         $(this).css("background-color", "orange")
+        //     })
+        //     $("#c").change(function(){
+        //         $(this).css("background-color", "pink")
+        //     })
+        //     $("#d").click(function(){
+        //        var a= $("#a").val();
+        //        var num= $("#b").val();
+        //        var con= $("#c").val();
+        //         // console.log(a);
+        //         $("#e").html(`Name: ${a}  Number : ${num}  Country : ${con}`,3000)
+        //     })
+        // })
+
+        // $(".a").fadeOut(3000)
+
+
+        // $(".a").fadeToggle(3000)
+
+
+        // $("#b").click(function(){
+        //     $(".a").slideToggle(5000)
+        // })
+        // $("#d").click(function(){
+        //     $(".a").stop()
+
+        // })
+
+
+
+        $("#d").ready(function(){
+            $(".a").animate({left:"250px"},2000,function(){
+                $(".a").animate({left:"0px"},2000)
+            })
+        })
+        $("#d").ready(function(){
+            $(".a h2").animate({fontSize:"4rem"},2000,function(){
+                $(".a h2").animate({fontSize:"1rem"},2000)
+            })
+        })
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

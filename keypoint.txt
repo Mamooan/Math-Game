@@ -1,0 +1,40 @@
+veriable:
+declear:var x,only mention the type and name
+define:assign the values x=35
+= is not eqal itys assignment operator
+5=5
+var can be declear and define multiple times
+let can be declear once and defined multiple times
+const can be define and declear only once
+
+// var x=25
+// var x=30
+// var x=40
+// var y=50
+// console.log(x,y)
+
+// x=50
+// console.log(x)
+
+// x=70
+// console.log(x)
+
+// let x=40
+//  x=50
+//  let y=70
+// console.log(x);
+
+// const x=40
+//  x=50
+
+//  console.log(x);
+
+var name="ali"
+var num=50
+var num2=60
+num+num2
+var result=num+num2
+console.log("ali",'afaq',`alina`,name,num)
+console.log(result);
+
+lets the price of a product is 5000 and it has 20% discount write a programm to calculate the value after discount.
